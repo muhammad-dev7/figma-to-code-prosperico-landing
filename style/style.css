@@ -184,7 +184,7 @@
   padding: var(--space-sm);
   background-color: var(--color-white);
   border: 1px solid var(--color-pink-border);
-  border-radius: 22px;
+  border-radius: var(--radius-full);
   box-shadow: var(--shadow-md);
   transition:
     background-color var(--transition-fast),
@@ -276,11 +276,11 @@
 .pricing__plan-type-swap {
   cursor: pointer;
   position: relative;
-  width: 12rem;
-  height: var(--space-7xl);
+  width: 9.2rem;
+  height: var(--space-6xl);
   background-color: var(--color-white);
   border: none;
-  border-radius: 63px;
+  border-radius: var(--radius-full);
   box-shadow: var(--shadow-sm);
 
   &::after {
@@ -292,7 +292,7 @@
     /* transform: translateX(calc(-100% - var(--space-sm))); */
     width: var(--space-5xl);
     height: var(--space-5xl);
-    border-radius: 63px;
+    border-radius: var(--radius-full);
     background-color: var(--color-text);
     transition: transform var(--transition-fast) ease-in;
   }
@@ -324,7 +324,7 @@
 
   &::before {
     content: '$';
-    font-size: 5.4rem;
+    font-size: var(--fs-6xl);
   }
 }
 
@@ -333,7 +333,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-lg);
-  margin-top: 5.4rem;
+  margin-top: var(--space-4xl);
 
   & svg {
     width: var(--space-xl);
@@ -438,7 +438,7 @@
   pointer-events: none;
   position: absolute;
   display: block;
-  max-width: 64rem;
+  max-width: 52rem;
   bottom: -75%;
   transform: translate(-20%, -50%);
 }
