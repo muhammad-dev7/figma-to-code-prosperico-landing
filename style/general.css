@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto.woff2') format('woff2');
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* TODO fix the website scale  */
+  /* font-size: 62.5%; */
+  font-size: 50%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 14.6rem;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #000;
+  background-color: #f2f5f8;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 5.6rem;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 99999;
+}
+
+.heading-first {
+  font-size: 9rem;
+  font-weight: 800;
+  text-wrap: balance;
+  letter-spacing: -0.055em;
+  line-height: 0.94em;
+
+  & .highlight-color {
+    color: #6dace7;
+  }
+
+  & .highlight-curve {
+    position: relative;
+
+    & svg {
+      position: absolute;
+      left: -20%;
+      bottom: -0.5rem;
+      height: 3rem;
+      transform-origin: left;
+      width: auto;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 7rem;
+  font-weight: 800;
+  line-height: 0.94em;
+  letter-spacing: -0.055em;
+}
+
+.heading-span {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.18em;
+  padding: 1.1rem 1.2rem;
+  background-color: #d3d3d3;
+  border-radius: 47px;
+  margin-bottom: 3rem;
+}
+
+.main-btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    display: inline-flex;
+    gap: 1rem;
+    width: fit-content;
+    padding: 2.5rem 4rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.18em;
+    letter-spacing: -0.035em;
+    color: #fff;
+    background-color: #212227;
+    border-radius: 47px;
+    transition: background-color 0.25s;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #111114;
+  }
+}
