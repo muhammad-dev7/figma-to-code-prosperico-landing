@@ -78,6 +78,7 @@
 /******************************/
 
 .heading-features-highlight {
+  display: block;
   color: var(--color-purple);
 }
 
@@ -94,7 +95,7 @@
   margin-top: var(--space-6xl);
 }
 
-.feautres__card {
+.features__card {
   justify-items: center;
   padding: var(--space-4xl) var(--space-lg) var(--space-7xl);
   background-color: var(--color-white);
@@ -149,7 +150,7 @@
 /****** testimonials Section ******/
 /**********************************/
 
-.testimonials-sectiion {
+.testimonials-section {
   align-items: unset;
   flex-direction: row;
   text-align: start;
@@ -179,6 +180,9 @@
 
 .testimonials__btn {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: var(--space-3xl);
   height: var(--space-3xl);
   padding: var(--space-sm);
@@ -203,9 +207,6 @@
 
 .testimonials__list {
   flex: 1;
-}
-
-.testimonials__list {
   position: relative;
   width: 100%;
 }
@@ -258,6 +259,8 @@
 .pricing__plans {
   display: flex;
   gap: var(--space-md);
+  /* ///////////////// */
+  align-items: stretch;
 }
 
 .pricing__plan-type-swap--container {
@@ -302,11 +305,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin-top: var(--space-6xl);
   padding: var(--space-4xl) var(--space-5xl);
   background-color: var(--color-white);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-sm);
+
+  & .main-btn {
+    margin-top: var(--space-8xl);
+    align-self: center;
+  }
 }
 
 .plan__name {
@@ -357,7 +366,7 @@
   display: flex;
   text-align: start;
   gap: var(--space-sm);
-  max-inline-size: 30rem;
+  max-inline-size: 22rem;
   margin-top: var(--space-8xl);
   font-size: var(--fs-sm);
   color: var(--color-text-muted);
@@ -373,7 +382,6 @@
 .plan__btn--starter {
   &:link,
   &:visited {
-    margin-top: auto;
     background-color: var(--color-pink);
   }
 
@@ -386,7 +394,6 @@
 .plan__btn--business {
   &:link,
   &:visited {
-    margin-top: var(--space-7xl);
     background-color: var(--color-purple);
   }
 
@@ -399,7 +406,6 @@
 .plan__btn--enterprise {
   &:link,
   &:visited {
-    margin-top: auto;
     background-color: var(--color-blue);
   }
 
@@ -414,7 +420,6 @@
 /*********************************/
 
 .section-cta {
-  position: relative;
   background-color: #e7e7e7;
 }
 
@@ -430,17 +435,22 @@
   gap: var(--space-5xl);
 
   & .heading-secondary {
-    width: 120%;
+    max-width: 120%;
   }
 }
 
+.cta__img-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .cta__statics-img {
-  pointer-events: none;
   position: absolute;
   display: block;
   max-width: 52rem;
-  bottom: -75%;
-  transform: translate(-20%, -50%);
+  top: 20%;
+  left: -25%;
 }
 
 .cta__description {
@@ -662,11 +672,19 @@
     color: var(--color-white);
     background-color: var(--color-purple);
     border: none;
-    translate: 0 1px;
+    translate: 0 2px;
     transition: opacity var(--transition-fast);
 
     &:hover {
       opacity: var(--opacity-sm);
     }
   }
+}
+
+/* Focus able */
+.main-btn:focus-visible,
+.accordion__btn:focus-visible,
+.testimonials__btn:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 4px;
 }
